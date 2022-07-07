@@ -1,4 +1,4 @@
-uuid: e6e80a35-0812-4ab2-a84c-f572b0300b24
+uuid: 766948bd-8ede-4f7b-829d-270f2973737d
 langcode: en
 status: true
 dependencies:
@@ -9,8 +9,8 @@ third_party_settings:
     available_menus:
       - main
     parent: 'main:'
-name: asda
-type: a
+name: Dresses
+type: dresses
 description: ''
 help: ''
 new_revision: true

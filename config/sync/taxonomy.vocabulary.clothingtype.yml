@@ -1,0 +1,8 @@
+uuid: f9c4c555-1b05-418d-be05-8598b4048fc1
+langcode: en
+status: true
+dependencies: {  }
+name: ClothingType
+vid: clothingtype
+description: ''
+weight: 0
