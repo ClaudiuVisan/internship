@@ -1,0 +1,27 @@
+uuid: e3f8827d-beb6-4220-9fc4-b1b8e9aaf700
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.tools
+  module:
+    - system
+  theme:
+    - thex
+_core:
+  default_config_hash: BvNkmW6TdrEqc2Ds2aozSHJ9YZtskUJtXSHGUFZJnlA
+id: thex_tools
+theme: thex
+region: content_top
+weight: -7
+provider: null
+plugin: 'system_menu_block:tools'
+settings:
+  id: 'system_menu_block:tools'
+  label: Tools
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

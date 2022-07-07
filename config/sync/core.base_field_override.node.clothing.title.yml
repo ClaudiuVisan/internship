@@ -1,14 +1,14 @@
-uuid: 6d05bbde-5805-4e52-960e-bae22a46473a
+uuid: 731be65a-731c-451b-af8c-049e467a11a9
 langcode: en
 status: true
 dependencies:
   config:
-    - node.type.a
-id: node.a.title
+    - node.type.clothing
+id: node.clothing.title
 field_name: title
 entity_type: node
-bundle: a
-label: Titlea
+bundle: clothing
+label: Clothing
 description: ''
 required: true
 translatable: true

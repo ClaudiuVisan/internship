@@ -1,0 +1,29 @@
+uuid: c14577e7-88f0-41d6-8267-1113a98465e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_typedress
+    - node.type.dresses
+    - taxonomy.vocabulary.dressestype
+id: node.dresses.field_typedress
+field_name: field_typedress
+entity_type: node
+bundle: dresses
+label: Type
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      dressestype: dressestype
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

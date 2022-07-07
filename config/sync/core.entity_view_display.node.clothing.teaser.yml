@@ -1,0 +1,44 @@
+uuid: ca69f441-aec1-40da-b7f7-b31469b5b6fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.clothing.body
+    - field.field.node.clothing.field_photo
+    - field.field.node.clothing.field_type
+    - node.type.clothing
+  module:
+    - image
+    - user
+id: node.clothing.teaser
+targetEntityType: node
+bundle: clothing
+mode: teaser
+content:
+  field_photo:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_type:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  body: true
