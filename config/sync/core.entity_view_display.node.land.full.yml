@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.full
     - field.field.node.land.body
     - field.field.node.land.field_address_land
+    - field.field.node.land.field_contact_info_land
     - field.field.node.land.field_land_type
     - field.field.node.land.field_location_land
     - field.field.node.land.field_pictures_land
@@ -13,6 +14,7 @@ dependencies:
     - node.type.land
   module:
     - image
+    - telephone
     - text
     - user
 id: node.land.full
@@ -33,6 +35,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 2
+    region: content
+  field_contact_info_land:
+    type: telephone_link
+    label: above
+    settings:
+      title: ''
+    third_party_settings: {  }
+    weight: 6
     region: content
   field_land_type:
     type: entity_reference_label
@@ -59,7 +69,7 @@ content:
       image_loading:
         attribute: lazy
     third_party_settings: {  }
-    weight: 6
+    weight: 7
     region: content
   field_price_land:
     type: number_decimal

@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.land.body
     - field.field.node.land.field_address_land
+    - field.field.node.land.field_contact_info_land
     - field.field.node.land.field_land_type
     - field.field.node.land.field_location_land
     - field.field.node.land.field_pictures_land
@@ -14,6 +15,7 @@ dependencies:
   module:
     - image
     - path
+    - telephone
     - text
 id: node.land.default
 targetEntityType: node
@@ -42,6 +44,13 @@ content:
     region: content
     settings:
       size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_contact_info_land:
+    type: telephone_default
+    weight: 127
+    region: content
+    settings:
       placeholder: ''
     third_party_settings: {  }
   field_land_type:

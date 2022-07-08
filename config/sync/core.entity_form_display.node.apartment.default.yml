@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.apartment.body
     - field.field.node.apartment.field_address
+    - field.field.node.apartment.field_contact_info_ap
     - field.field.node.apartment.field_contract_type
     - field.field.node.apartment.field_location
     - field.field.node.apartment.field_number_of_rooms
@@ -16,6 +17,7 @@ dependencies:
   module:
     - image
     - path
+    - telephone
     - text
 id: node.apartment.default
 targetEntityType: node
@@ -44,6 +46,13 @@ content:
     region: content
     settings:
       size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_contact_info_ap:
+    type: telephone_default
+    weight: 130
+    region: content
+    settings:
       placeholder: ''
     third_party_settings: {  }
   field_contract_type:

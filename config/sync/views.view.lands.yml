@@ -8,8 +8,11 @@ dependencies:
     - field.storage.node.field_price_land
     - node.type.land
     - system.menu.main
+    - taxonomy.vocabulary.landtype
+    - taxonomy.vocabulary.location
   module:
     - node
+    - taxonomy
     - user
 id: lands
 label: Lands
@@ -302,61 +305,9 @@ display:
         type: tag
         options: {  }
       empty: {  }
-      sorts:
-        field_price_land_value:
-          id: field_price_land_value
-          table: node__field_price_land
-          field: field_price_land_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: standard
-          order: ASC
-          expose:
-            label: Price
-            field_identifier: field_price_land_value
-          exposed: true
-        field_location_land_target_id:
-          id: field_location_land_target_id
-          table: node__field_location_land
-          field: field_location_land_target_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: standard
-          order: ASC
-          expose:
-            label: Location
-            field_identifier: field_location_land_target_id
-          exposed: true
-        field_land_type_target_id:
-          id: field_land_type_target_id
-          table: node__field_land_type
-          field: field_land_type_target_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: standard
-          order: ASC
-          expose:
-            label: 'Land type '
-            field_identifier: field_land_type_target_id
-          exposed: true
+      sorts: {  }
       arguments: {  }
       filters:
-        status:
-          id: status
-          table: node_field_data
-          field: status
-          entity_type: node
-          entity_field: status
-          plugin_id: boolean
-          value: '1'
-          group: 1
-          expose:
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
         type:
           id: type
           table: node_field_data
@@ -369,8 +320,199 @@ display:
           expose:
             operator_limit_selection: false
             operator_list: {  }
+        field_price_land_value:
+          id: field_price_land_value
+          table: node__field_price_land
+          field: field_price_land_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: numeric
+          operator: between
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_price_land_value_op
+            label: 'Price '
+            description: ''
+            use_operator: false
+            operator: field_price_land_value_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_price_land_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+            min_placeholder: '0'
+            max_placeholder: '99999999999'
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: 'Price (field_price_land)'
+            description: null
+            identifier: field_price_land_value
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items:
+              1: {  }
+              2: {  }
+              3: {  }
+        field_location_land_target_id:
+          id: field_location_land_target_id
+          table: node__field_location_land
+          field: field_location_land_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_location_land_target_id_op
+            label: Location
+            description: ''
+            use_operator: false
+            operator: field_location_land_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_location_land_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: location
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
+        field_land_type_target_id:
+          id: field_land_type_target_id
+          table: node__field_land_type
+          field: field_land_type_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_land_type_target_id_op
+            label: 'Land type'
+            description: ''
+            use_operator: false
+            operator: field_land_type_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_land_type_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: landtype
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
       style:
         type: table
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+          columns:
+            title: title
+            field_price_land: field_price_land
+            field_location_land: field_location_land
+            field_land_type: field_land_type
+          default: '-1'
+          info:
+            title:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_price_land:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_location_land:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_land_type:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+          override: true
+          sticky: false
+          summary: ''
+          empty_table: false
+          caption: ''
+          description: ''
       row:
         type: fields
       query:
@@ -390,9 +532,9 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
         - url.query_args
-        - 'url.query_args:sort_by'
-        - 'url.query_args:sort_order'
+        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:
@@ -421,9 +563,9 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
         - url.query_args
-        - 'url.query_args:sort_by'
-        - 'url.query_args:sort_order'
+        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:
