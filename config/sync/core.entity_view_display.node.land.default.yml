@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.land.field_location_land
     - field.field.node.land.field_pictures_land
     - field.field.node.land.field_price_land
+    - image.style.photogallery
     - node.type.land
   module:
     - image
@@ -54,7 +55,7 @@ content:
     label: above
     settings:
       image_link: ''
-      image_style: ''
+      image_style: photogallery
       image_loading:
         attribute: lazy
     third_party_settings: {  }

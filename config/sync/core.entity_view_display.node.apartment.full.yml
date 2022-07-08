@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.apartment.field_photo
     - field.field.node.apartment.field_price
     - field.field.node.apartment.field_thumbnail
+    - image.style.photogallery
     - node.type.apartment
   module:
     - image
@@ -65,7 +66,7 @@ content:
     label: hidden
     settings:
       image_link: ''
-      image_style: ''
+      image_style: photogallery
       image_loading:
         attribute: lazy
     third_party_settings: {  }

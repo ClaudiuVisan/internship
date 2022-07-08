@@ -22,10 +22,10 @@ bundle: article
 mode: teaser
 content:
   body:
-    type: text_summary_or_trimmed
+    type: text_trimmed
     label: hidden
     settings:
-      trim_length: 200
+      trim_length: 400
     third_party_settings: {  }
     weight: 0
     region: content
@@ -42,7 +42,7 @@ content:
     region: content
   field_tags:
     type: entity_reference_label
-    label: above
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
