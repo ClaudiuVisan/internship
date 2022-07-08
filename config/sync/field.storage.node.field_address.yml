@@ -1,0 +1,20 @@
+uuid: d91768c2-5cc9-4dff-ab1e-8884d35f07d7
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_address
+field_name: field_address
+entity_type: node
+type: text
+settings:
+  max_length: 100
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

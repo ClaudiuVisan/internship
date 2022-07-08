@@ -1,4 +1,4 @@
-uuid: ee662e06-448c-4974-9eeb-18d60651e5bd
+uuid: b8128946-a7cb-4e72-8544-d8f601570aea
 langcode: en
 status: true
 dependencies:
@@ -6,8 +6,8 @@ dependencies:
     - file
     - image
     - node
-id: node.field_photo
-field_name: field_photo
+id: node.field_pictures_land
+field_name: field_pictures_land
 entity_type: node
 type: image
 settings:
@@ -23,7 +23,7 @@ settings:
     height: null
 module: image
 locked: false
-cardinality: 1
+cardinality: -1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

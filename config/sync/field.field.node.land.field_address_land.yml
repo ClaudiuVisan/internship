@@ -1,0 +1,21 @@
+uuid: b421db95-31ef-4e68-be4d-82cba16285d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_address_land
+    - node.type.land
+  module:
+    - text
+id: node.land.field_address_land
+field_name: field_address_land
+entity_type: node
+bundle: land
+label: Address
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

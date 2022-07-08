@@ -1,0 +1,21 @@
+uuid: 8fea434a-0aa1-4023-9c0a-1b770d941aaa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_address
+    - node.type.apartment
+  module:
+    - text
+id: node.apartment.field_address
+field_name: field_address
+entity_type: node
+bundle: apartment
+label: Address
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

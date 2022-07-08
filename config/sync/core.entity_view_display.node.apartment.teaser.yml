@@ -1,0 +1,85 @@
+uuid: ba8fe98c-dde1-4da8-9b30-284bf419a34f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.apartment.body
+    - field.field.node.apartment.field_address
+    - field.field.node.apartment.field_contract_type
+    - field.field.node.apartment.field_location
+    - field.field.node.apartment.field_number_of_rooms
+    - field.field.node.apartment.field_photo
+    - field.field.node.apartment.field_price
+    - field.field.node.apartment.field_thumbnail
+    - node.type.apartment
+  module:
+    - image
+    - text
+    - user
+id: node.apartment.teaser
+targetEntityType: node
+bundle: apartment
+mode: teaser
+content:
+  field_address:
+    type: text_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_contract_type:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_location:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_number_of_rooms:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_price:
+    type: number_decimal
+    label: inline
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_thumbnail:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  body: true
+  field_photo: true
