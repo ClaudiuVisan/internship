@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.apartment.body
     - field.field.node.apartment.field_address
+    - field.field.node.apartment.field_contact_info_ap
     - field.field.node.apartment.field_contract_type
     - field.field.node.apartment.field_location
     - field.field.node.apartment.field_number_of_rooms
@@ -83,4 +84,5 @@ content:
     region: content
 hidden:
   body: true
+  field_contact_info_ap: true
   field_photo: true

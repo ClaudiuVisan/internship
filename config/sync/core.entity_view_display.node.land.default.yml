@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.land.body
     - field.field.node.land.field_address_land
+    - field.field.node.land.field_contact_info_land
     - field.field.node.land.field_land_type
     - field.field.node.land.field_location_land
     - field.field.node.land.field_pictures_land
@@ -33,6 +34,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 106
+    region: content
+  field_contact_info_land:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 107
     region: content
   field_land_type:
     type: entity_reference_label

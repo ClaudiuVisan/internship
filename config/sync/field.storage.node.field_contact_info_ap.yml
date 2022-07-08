@@ -1,0 +1,19 @@
+uuid: 87bf5471-0c49-4c92-ab27-a9a5b2ea43ea
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - telephone
+id: node.field_contact_info_ap
+field_name: field_contact_info_ap
+entity_type: node
+type: telephone
+settings: {  }
+module: telephone
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

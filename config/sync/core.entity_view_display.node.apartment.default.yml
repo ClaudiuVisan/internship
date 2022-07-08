@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.apartment.body
     - field.field.node.apartment.field_address
+    - field.field.node.apartment.field_contact_info_ap
     - field.field.node.apartment.field_contract_type
     - field.field.node.apartment.field_location
     - field.field.node.apartment.field_number_of_rooms
@@ -35,6 +36,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 103
+    region: content
+  field_contact_info_ap:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 110
     region: content
   field_contract_type:
     type: entity_reference_label
