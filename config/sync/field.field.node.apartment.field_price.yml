@@ -1,0 +1,23 @@
+uuid: 0b0a10ff-93e4-45f2-baaa-bae54933ba89
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_price
+    - node.type.apartment
+id: node.apartment.field_price
+field_name: field_price
+entity_type: node
+bundle: apartment
+label: Price
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: !!float 0
+  max: null
+  prefix: €
+  suffix: ''
+field_type: float

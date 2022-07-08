@@ -1,0 +1,38 @@
+uuid: f11a3b81-cbbd-413a-a33a-369462a1f507
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pictures_land
+    - node.type.land
+  module:
+    - image
+id: node.land.field_pictures_land
+field_name: field_pictures_land
+entity_type: node
+bundle: land
+label: Pictures
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: '500 KB'
+  max_resolution: 1280x720
+  min_resolution: 320x240
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+field_type: image

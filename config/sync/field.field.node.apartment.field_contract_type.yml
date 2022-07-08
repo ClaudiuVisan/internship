@@ -1,0 +1,29 @@
+uuid: 0f0b92de-011c-4dd9-a38c-85e317c6f418
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contract_type
+    - node.type.apartment
+    - taxonomy.vocabulary.contracttype
+id: node.apartment.field_contract_type
+field_name: field_contract_type
+entity_type: node
+bundle: apartment
+label: 'Contract type'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      contracttype: contracttype
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

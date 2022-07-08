@@ -1,0 +1,29 @@
+uuid: 34685553-f4cc-4ebd-a11d-80d0ba6008b4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_number_of_rooms
+    - node.type.apartment
+    - taxonomy.vocabulary.number_of_rooms
+id: node.apartment.field_number_of_rooms
+field_name: field_number_of_rooms
+entity_type: node
+bundle: apartment
+label: 'Number of rooms'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      number_of_rooms: number_of_rooms
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

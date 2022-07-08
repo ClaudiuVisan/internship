@@ -1,0 +1,29 @@
+uuid: 37b7dbd1-84ca-4371-98c9-630e5f4b81ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_land_type
+    - node.type.land
+    - taxonomy.vocabulary.landtype
+id: node.land.field_land_type
+field_name: field_land_type
+entity_type: node
+bundle: land
+label: 'Land type'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      landtype: landtype
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
